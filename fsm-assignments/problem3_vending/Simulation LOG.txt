@@ -1,0 +1,54 @@
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Time=0 ns, rst=1, coin=00, dispense=0, chg5=0, state=xx
+Time=5000 ns, rst=1, coin=00, dispense=0, chg5=0, state=00
+Time=15000 ns, rst=0, coin=00, dispense=0, chg5=0, state=00
+
+--- Starting Vending Machine Test ---
+
+--> Test Case 1: 10 + 10 = 20
+Time=35000 ns, rst=0, coin=10, dispense=0, chg5=0, state=00
+Time=45000 ns, rst=0, coin=00, dispense=0, chg5=0, state=10
+Time=55000 ns, rst=0, coin=10, dispense=1, chg5=0, state=10
+Time=65000 ns, rst=0, coin=00, dispense=0, chg5=0, state=00
+
+--> Test Case 2: 5 + 5 + 5 + 5 = 20
+Time=95000 ns, rst=0, coin=01, dispense=0, chg5=0, state=00
+Time=105000 ns, rst=0, coin=00, dispense=0, chg5=0, state=01
+Time=115000 ns, rst=0, coin=01, dispense=0, chg5=0, state=01
+Time=125000 ns, rst=0, coin=00, dispense=0, chg5=0, state=10
+Time=135000 ns, rst=0, coin=01, dispense=0, chg5=0, state=10
+Time=145000 ns, rst=0, coin=00, dispense=0, chg5=0, state=11
+Time=155000 ns, rst=0, coin=01, dispense=1, chg5=0, state=11
+Time=165000 ns, rst=0, coin=00, dispense=0, chg5=0, state=00
+
+--> Test Case 3: 10 + 5 + 10 = 25
+Time=195000 ns, rst=0, coin=10, dispense=0, chg5=0, state=00
+Time=205000 ns, rst=0, coin=00, dispense=0, chg5=0, state=10
+Time=215000 ns, rst=0, coin=01, dispense=0, chg5=0, state=10
+Time=225000 ns, rst=0, coin=00, dispense=0, chg5=0, state=11
+Time=235000 ns, rst=0, coin=10, dispense=1, chg5=1, state=11
+Time=245000 ns, rst=0, coin=00, dispense=0, chg5=0, state=00
+
+--> Test Case 4: 5 + idle + 10 + invalid + 5
+Time=275000 ns, rst=0, coin=01, dispense=0, chg5=0, state=00
+Time=285000 ns, rst=0, coin=00, dispense=0, chg5=0, state=01
+Time=315000 ns, rst=0, coin=10, dispense=0, chg5=0, state=01
+Time=325000 ns, rst=0, coin=00, dispense=0, chg5=0, state=11
+Time=335000 ns, rst=0, coin=11, dispense=0, chg5=0, state=11
+Time=345000 ns, rst=0, coin=00, dispense=0, chg5=0, state=11
+Time=355000 ns, rst=0, coin=01, dispense=1, chg5=0, state=11
+
+--- Test Finished ---
+$finish called at time : 365 ns : File "C:/Users/Hp/CS322M/CS322M.srcs/sim_1/new/tb_vending_mealy.v" Line 97
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_vending_mealy_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 1658.555 ; gain = 29.676

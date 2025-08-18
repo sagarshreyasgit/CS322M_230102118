@@ -1,0 +1,32 @@
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+T=65000 | NS: G=1 Y=0 R=0 | EW: G=0 Y=0 R=1
+T=115000 | NS: G=1 Y=0 R=0 | EW: G=0 Y=0 R=1
+T=165000 | NS: G=1 Y=0 R=0 | EW: G=0 Y=0 R=1
+T=215000 | NS: G=1 Y=0 R=0 | EW: G=0 Y=0 R=1
+T=265000 | NS: G=1 Y=0 R=0 | EW: G=0 Y=0 R=1
+T=315000 | NS: G=0 Y=1 R=0 | EW: G=0 Y=0 R=1
+T=365000 | NS: G=0 Y=1 R=0 | EW: G=0 Y=0 R=1
+T=415000 | NS: G=0 Y=0 R=1 | EW: G=1 Y=0 R=0
+T=465000 | NS: G=0 Y=0 R=1 | EW: G=1 Y=0 R=0
+T=515000 | NS: G=0 Y=0 R=1 | EW: G=1 Y=0 R=0
+T=565000 | NS: G=0 Y=0 R=1 | EW: G=1 Y=0 R=0
+T=615000 | NS: G=0 Y=0 R=1 | EW: G=1 Y=0 R=0
+T=665000 | NS: G=0 Y=0 R=1 | EW: G=0 Y=1 R=0
+T=715000 | NS: G=0 Y=0 R=1 | EW: G=0 Y=1 R=0
+T=765000 | NS: G=1 Y=0 R=0 | EW: G=0 Y=0 R=1
+T=815000 | NS: G=1 Y=0 R=0 | EW: G=0 Y=0 R=1
+T=865000 | NS: G=1 Y=0 R=0 | EW: G=0 Y=0 R=1
+T=915000 | NS: G=1 Y=0 R=0 | EW: G=0 Y=0 R=1
+T=965000 | NS: G=1 Y=0 R=0 | EW: G=0 Y=0 R=1
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_traffic_light_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 2575.746 ; gain = 30.727
