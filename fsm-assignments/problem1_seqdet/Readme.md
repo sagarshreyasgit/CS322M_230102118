@@ -15,7 +15,7 @@ The output `y` generates a **1-cycle pulse** when the last bit (`1`) of the sequ
 - Output `y=1` only when full pattern `1101` is detected.  
 
 ![State Diagram]()
-![Block Design]()
+![Block Design](https://github.com/sagarshreyasgit/CS322M_230102118/blob/main/fsm-assignments/problem1_seqdet/waves/Block_diagram.png)
 
 ---
 
